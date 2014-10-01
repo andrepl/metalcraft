@@ -1,8 +1,8 @@
-The main game for the Minetest game engine [minetest_game]
+A Minetest Game, based on mintest_game
 ==========================================================
 
 To use this game with Minetest, insert this repository as
-  /games/minetest_game
+  /games/mvm
 in the Minetest Engine.
 
 The Minetest Engine can be found in:
