@@ -2,7 +2,7 @@ A Minetest Game, based on mintest_game
 ==========================================================
 
 To use this game with Minetest, insert this repository as
-  /games/mvm
+  /games/metalcraft
 in the Minetest Engine.
 
 The Minetest Engine can be found in:
