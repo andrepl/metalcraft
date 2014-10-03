@@ -2,7 +2,7 @@ local _afk = {}
 local _last_input = {}
 local _last_look = {}
 
-local cjson = require "cjson"
+-- local cjson = require "cjson"
 
 local AUTO_AFK_AFTER = 60
 local KICK_AFTER = 600

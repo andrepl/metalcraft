@@ -1,6 +1,4 @@
 
-local cjson = require "cjson"
-
 local PLAYER_DATA_DIR = minetest.get_worldpath().."/playerdata"
 os.execute("mkdir "..PLAYER_DATA_DIR)
 
@@ -40,8 +38,7 @@ local function read_playerfile(player)
 	local f = io.open(PLAYER_DATA_DIR..'/'..player..'.json', 'r')
 	local data
 	if f ~= nil then
-		data = cjson.decode(f:read("*a"))
-		if data == cjson.null then data = nil end
+		data = minetest.parse_json(f:read("*a"))
 	end
 	return data
 end
@@ -50,7 +47,7 @@ local function save_playerfile(player)
 	player = get_player_name(player)
 	_dirty[player] = nil
 	local f = io.open(PLAYER_DATA_DIR..'/'..player..'.json', 'w')
-	f:write(cjson.encode(_data[player]))
+	f:write(minetest.write_json(_data[player]))
 	f:close()
 end
 
