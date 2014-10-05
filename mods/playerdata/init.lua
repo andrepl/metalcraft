@@ -2,7 +2,7 @@
 local PLAYER_DATA_DIR = minetest.get_worldpath().."/playerdata"
 os.execute("mkdir "..PLAYER_DATA_DIR)
 
-local MAX_SAVED_PER_TICK = 2
+local MAX_SAVED_PER_TICK = 10
 local SAVE_INTERVAL = 30
 
 local backend = 'json'

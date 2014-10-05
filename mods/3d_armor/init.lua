@@ -1,6 +1,6 @@
 ARMOR_MOD_NAME = minetest.get_current_modname()
 dofile(minetest.get_modpath(ARMOR_MOD_NAME).."/armor.lua")
-local use_moreores = minetest.get_modpath("moreores")
+local use_moreores = minetest.get_modpath("mithril")
 
 -- Regisiter Head Armor
 
@@ -197,7 +197,7 @@ local craft_ingreds = {
 }
 
 if use_moreores then
-	craft_ingreds.mithril = "moreores:mithril_ingot"
+	craft_ingreds.mithril = "mithril:mithril_ingot"
 end
 
 for k, v in pairs(craft_ingreds) do
